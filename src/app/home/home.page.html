@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Study Session
     </ion-title>
     <ion-item slot="end">
       <ion-icon name="moon"></ion-icon>
@@ -16,7 +16,7 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Study Session</ion-title>
     </ion-toolbar>
   </ion-header>
   <div id="container">
@@ -33,10 +33,10 @@
     <ion-button>
       <ion-icon slot="start" name="star"></ion-icon>
       <ion-icon slot="end" name="star"></ion-icon>
-
-      {{ text }}
+      {{ text }} Join Meeting Button
     </ion-button>
-    <ion-button (click)="changeText()"> Click to Change Text</ion-button>
+
+    <ion-button (click)="changeText()"> Click to Change Text // Create Meeting Button</ion-button>
     <ion-grid>
       <ion-row>
         <ion-col>
@@ -44,23 +44,29 @@
             <!-- <ion-img class="icon-small" [src]="src"></ion-img> -->
             <ion-card-header>
               <ion-card-title>
-                First Card title
+                Schedule Meeting
               </ion-card-title>
-
-              <ion-card-subtitle>
-                First Card Sub
-              </ion-card-subtitle>
             </ion-card-header>
 
             <ion-card-content>
-              
+              <ion-icon class="icon-large" name="calendar"></ion-icon>
             </ion-card-content>
           </ion-card>
         </ion-col>
         <ion-col>
           <ion-card>
-            <ion-card-header> </ion-card-header>
-            <ion-card-content> </ion-card-content>
+            <ion-card-header>
+              <ion-card-title>
+                Check Appointments
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content> 
+
+              <!--  VAMOS INVESTIGAR ISTO AINDA -->
+              <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14">
+                
+              </ion-datetime>
+            </ion-card-content>
           </ion-card>
         </ion-col>
       </ion-row>
