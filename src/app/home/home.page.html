@@ -14,7 +14,18 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <strong>Pronto Para Criar App Ray?</strong>
+    <p>Componentes do Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button>
+      <ion-icon slot="start" name="star" ></ion-icon>
+      <ion-icon slot="end" name="star" ></ion-icon> 
+      
+       {{ text }}
+
+    </ion-button>
+  <ion-button (click) = "changeText()"> Click to Change Text</ion-button>
   </div>
+
+  
+
 </ion-content>
