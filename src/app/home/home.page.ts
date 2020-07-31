@@ -8,11 +8,23 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   text = ' Texto Inicial';
+  src = '/assets/icon/favicon.png';
 
-  constructor() {}
+  constructor() {
+  }
 
   changeText(){
     this.text = 'Texto Novo  Ainda vamos brincar bem XD' ;
+  }
+
+  changeTheme(event){
+    
+    if(event.detail.checked){
+      document.body.setAttribute('color-theme', 'dark');
+    }else{
+      document.body.setAttribute('color-theme', 'light');
+    }
+    
   }
 
 }

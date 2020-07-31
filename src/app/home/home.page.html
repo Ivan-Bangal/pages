@@ -3,6 +3,13 @@
     <ion-title>
       Blank
     </ion-title>
+    <ion-item slot="end">
+      <ion-icon name="moon"></ion-icon>
+      <ion-toggle id="toggle" (ionChange)="changeTheme($event)">Stuff</ion-toggle>
+      <ion-label 
+        >Adding Dark Mode</ion-label
+      >
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
@@ -12,20 +19,53 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-
   <div id="container">
     <strong>Pronto Para Criar App Ray?</strong>
-    <p>Componentes do Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <p>
+      Componentes do Ionic
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://ionicframework.com/docs/components"
+        >UI Components</a
+      >
+    </p>
     <ion-button>
-      <ion-icon slot="start" name="star" ></ion-icon>
-      <ion-icon slot="end" name="star" ></ion-icon> 
-      
-       {{ text }}
+      <ion-icon slot="start" name="star"></ion-icon>
+      <ion-icon slot="end" name="star"></ion-icon>
 
+      {{ text }}
     </ion-button>
-  <ion-button (click) = "changeText()"> Click to Change Text</ion-button>
+    <ion-button (click)="changeText()"> Click to Change Text</ion-button>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <!-- <ion-img class="icon-small" [src]="src"></ion-img> -->
+            <ion-card-header>
+              <ion-card-title>
+                First Card title
+              </ion-card-title>
+
+              <ion-card-subtitle>
+                First Card Sub
+              </ion-card-subtitle>
+            </ion-card-header>
+
+            <ion-card-content>
+              
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card>
+            <ion-card-header> </ion-card-header>
+            <ion-card-content> </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 
-  
 
 </ion-content>
