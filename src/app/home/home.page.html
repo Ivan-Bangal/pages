@@ -1,14 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Study Session
-    </ion-title>
+    <ion-title> Study Session </ion-title>
     <ion-item slot="end">
       <ion-icon name="moon"></ion-icon>
-      <ion-toggle id="toggle" (ionChange)="changeTheme($event)">Stuff</ion-toggle>
-      <ion-label 
-        >Adding Dark Mode</ion-label
+      <ion-toggle id="toggle" (ionChange)="changeTheme($event)"
+        >Stuff</ion-toggle
       >
+      <ion-label> Adding Dark Mode </ion-label>
     </ion-item>
   </ion-toolbar>
 </ion-header>
@@ -20,15 +18,14 @@
     </ion-toolbar>
   </ion-header>
   <div id="container">
-    <strong>Pronto Para Criar App Ray?</strong>
+    <strong>Pronto Para Criar App</strong>
     <p>
       Componentes do Ionic
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://ionicframework.com/docs/components"
-        >UI Components</a
-      >
+
+      <!--  -->
+      <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">
+        UI Components
+      </a>
     </p>
     <ion-button>
       <ion-icon slot="start" name="star"></ion-icon>
@@ -36,42 +33,29 @@
       {{ text }} Join Meeting Button
     </ion-button>
 
-    <ion-button (click)="changeText()"> Click to Change Text // Create Meeting Button</ion-button>
+    <ion-button (click)="changeText()">
+      Click to Change Text // Create Meeting Button</ion-button
+    >
     <ion-grid>
       <ion-row>
-        <ion-col>
-          <ion-card>
+        <!-- 'FOR' EXAMPLE  -->
+        <ion-col *ngFor="let heroi of heroes" (click)='selectHero(heroi)' >
+          <ion-card [class.selected]='heroi === selectedHero'>
             <!-- <ion-img class="icon-small" [src]="src"></ion-img> -->
             <ion-card-header>
-              <ion-card-title>
-                Schedule Meeting
-              </ion-card-title>
+              <ion-card-title> Hero Name : {{heroi.name}} </ion-card-title>
             </ion-card-header>
 
             <ion-card-content>
-              <ion-icon class="icon-large" name="calendar"></ion-icon>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <ion-card-header>
-              <ion-card-title>
-                Check Appointments
-              </ion-card-title>
-            </ion-card-header>
-            <ion-card-content> 
-
-              <!--  VAMOS INVESTIGAR ISTO AINDA -->
-              <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14">
-                
-              </ion-datetime>
+              {{heroi.id}}
             </ion-card-content>
           </ion-card>
         </ion-col>
       </ion-row>
+      <!-- IF EXAMPLE -->
+      <app-heroe-details [heroe]="selectedHero"></app-heroe-details>
+      
+      
     </ion-grid>
   </div>
-
-
 </ion-content>

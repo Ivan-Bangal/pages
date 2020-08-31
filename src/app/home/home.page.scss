@@ -25,3 +25,13 @@
 #container a {
   text-decoration: none;
 }
+
+ion-card.selected {
+  
+  background-color: #00acf6;
+  
+}
+
+ion-card :hover {
+  background-color: #81959e;
+}

@@ -1,0 +1,20 @@
+<ion-row *ngIf="heroe">
+  <ion-col>
+    <ion-card>
+      <!-- <ion-img class="icon-small" [src]="src"></ion-img> -->
+      <ion-card-header>
+        <ion-card-title> Hero Name : {{ heroe.name }} </ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-label> Insert Name : </ion-label>
+          <ion-input
+            [(ngModel)]="heroe.name"
+            placeholder="name"
+          ></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-row>
