@@ -2,13 +2,7 @@ import { DefaultHeroes } from './../Objects/defaultHeroes';
 import { Hero } from '../Objects/hero';
 import { Component } from '@angular/core';
 
-
-
-
-
-
 @Component({
-  
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
