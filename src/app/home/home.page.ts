@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { DefaultHeroes } from './../Objects/defaultHeroes';
 import { Hero } from '../Objects/hero';
 import { Component } from '@angular/core';
@@ -11,6 +12,8 @@ export class HomePage {
 
   heroes = DefaultHeroes;
   selectedHero: Hero;
+  http: HttpClient;
+  string: string;
 
   hero: Hero = {
     id: 1,
@@ -20,15 +23,18 @@ export class HomePage {
   text = ' Texto Inicial';
   srcFirstCard = '/assets/icon/favicon.png';
 
-  constructor() {
-  }
+  constructor() {}
+
 
   changeText(){
     this.text = 'Texto Novo' ;
+    const headers = new HttpHeaders()
+            .set('username', 'username').set('password', 'password');
+    console.log(this.http.get('http://localhost:8080/isutc/api/fenix/jersey/services/planos.json', {headers}));
   }
 
   changeTheme(event){
-    if(event.detail.checked){
+    if (event.detail.checked){
       document.body.setAttribute('color-theme', 'dark');
     }else{
       document.body.setAttribute('color-theme', 'light');

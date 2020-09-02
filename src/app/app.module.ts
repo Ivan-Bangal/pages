@@ -7,8 +7,9 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HeroeDetailsComponent } from './heroe-details/heroe-details.component'
+import { HeroeDetailsComponent } from './heroe-details/heroe-details.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HttpHeaders} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,8 @@ import { FormsModule } from '@angular/forms';
   entryComponents: [],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    HttpHeaders,
     IonicModule.forRoot(),
     AppRoutingModule,
     FormsModule],
