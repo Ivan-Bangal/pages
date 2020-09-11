@@ -1,3 +1,5 @@
+import { Chooser } from '@ionic-native/chooser/ngx';
+import { FileChooser } from '@ionic-native/file-chooser/ngx';
 import { HomePage } from './home/home.page';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,7 +11,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeroeDetailsComponent } from './heroe-details/heroe-details.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule, HttpHeaders} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,14 +22,15 @@ import { HttpClientModule, HttpHeaders} from '@angular/common/http';
   entryComponents: [],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    HttpHeaders,
     IonicModule.forRoot(),
+    HttpClientModule,
     AppRoutingModule,
     FormsModule],
   providers: [
     StatusBar,
     SplashScreen,
+    FileChooser,
+    Chooser,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
-<ion-row *ngIf="heroe">
+<form (ngSubmit)="onSubmit()" #heroForm="ngForm" *ngIf="heroe">
+<ion-row>
   <ion-col>
     <ion-card>
       <!-- <ion-img class="icon-small" [src]="src"></ion-img> -->
@@ -12,9 +13,27 @@
           <ion-input
             [(ngModel)]="heroe.name"
             placeholder="name"
+            #name='ngModel'
+            name="name"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label> Insert ID : </ion-label>
+          <ion-input
+            [(ngModel)]="heroe.id"
+            placeholder="id"
+            #id='ngModel'
+            name="id"
           ></ion-input>
         </ion-item>
       </ion-card-content>
     </ion-card>
   </ion-col>
 </ion-row>
+<ion-row>
+  <ion-col>
+    <ion-button type='submit'> Submit</ion-button>
+  </ion-col>
+</ion-row>
+
+</form>

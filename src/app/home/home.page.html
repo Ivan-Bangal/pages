@@ -1,20 +1,11 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title> Study Session </ion-title>
-    <ion-item slot="end">
-      <ion-icon name="moon"></ion-icon>
-      <ion-toggle id="toggle" (ionChange)="changeTheme($event)"
-        >Stuff</ion-toggle
-      >
-      <ion-label> Adding Dark Mode </ion-label>
-    </ion-item>
-  </ion-toolbar>
-</ion-header>
+
 <!--Start of Tawk.to Script-->
 
   <!--End of Tawk.to Script-->
 
 <ion-content [fullscreen]="true">
+
+  
 
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -31,35 +22,49 @@
         UI Components
       </a>
     </p>
-    <ion-button>
-      <ion-icon slot="start" name="star"></ion-icon>
-      <ion-icon slot="end" name="star"></ion-icon>
-      {{ text }} Join Meeting Button
-    </ion-button>
+
+
+    
+
+    
+      <ion-button (click)='loadImageFromDevice()'>
+        <ion-icon slot="start" name="star"></ion-icon>
+        <ion-icon slot="end" name="star"></ion-icon>
+        {{ text }}
+        
+      </ion-button>
+  
+    
+    
 
     <ion-button (click)="changeText()">
-      Click to Change Text // Create Meeting Button</ion-button
+      Click to Change Text</ion-button
     >
+
     <ion-grid>
       <ion-row>
-        <!-- 'FOR' EXAMPLE  -->
+       
         <ion-col *ngFor="let heroi of heroes" (click)='selectHero(heroi)' >
           <ion-card [class.selected]='heroi === selectedHero'>
-            <!-- <ion-img class="icon-small" [src]="src"></ion-img> -->
+            
             <ion-card-header>
               <ion-card-title> Hero Name : {{heroi.name}} </ion-card-title>
             </ion-card-header>
 
             <ion-card-content>
               {{heroi.id}}
+              <ion-img style="height: 5%; width: 5%;" [src]="srcFirstCard"></ion-img>
             </ion-card-content>
           </ion-card>
         </ion-col>
       </ion-row>
-      <!-- IF EXAMPLE AND COMPONENT -->
+      
       <app-heroe-details [heroe]="selectedHero"></app-heroe-details>
-      
-      
+
     </ion-grid>
+  
+  <!-- <ion-img class="icon-small" [src]="src"></ion-img> -->
+   <!-- 'FOR' EXAMPLE  -->
+  <!-- IF EXAMPLE AND COMPONENT -->
   </div>
 </ion-content>
